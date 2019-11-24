@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    
+
                     <form action="" method="POST">
                         @csrf
                         <div class="form-group">
@@ -34,7 +34,6 @@
                         <button type="submit" name="submit" value="submit" class="btn btn-primary mb-2">Make Payment</button>
                         <a href="" class="btn btn-link">Cancel</a>
                       </form>
-
 
                 </div>
             </div>
