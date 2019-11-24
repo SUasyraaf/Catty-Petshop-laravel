@@ -26,7 +26,7 @@
                                     @foreach ($packages as $package)
                                         <tr>
                                             <td>{{ $package->id}}</td>
-                                            <td>{{ $package->package}}</td>
+                                            <td>{{ $package->packagename}}</td>
                                             <td>{{ $package->price}}</td>
                                         </tr>
                                     @endforeach

@@ -32,7 +32,7 @@
                         </div>
 
                         <button type="submit" name="submit" value="submit" class="btn btn-primary mb-2">Make Payment</button>
-                        <a href="" class="btn btn-link">Cancel</a>
+                        <a href="{{ route('booking:index') }}" class="btn btn-link">Cancel</a>
                       </form>
 
                 </div>

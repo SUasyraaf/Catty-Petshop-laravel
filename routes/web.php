@@ -24,4 +24,4 @@ Route::post('/bookings/create', 'BookingController@store')->name('store');
 
 Route::get('/bookings/index', 'BookingController@index')->name('booking:index');
 
-Route::get('/packages/{price}', 'PackageController@index')->name('booking:index');
+Route::get('/packages/index', 'PackageController@index')->name('package:index');
