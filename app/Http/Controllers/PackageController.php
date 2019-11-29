@@ -26,7 +26,7 @@ class PackageController extends Controller
      */
     public function create()
     {
-        //
+        return view('packages.create');
     }
 
     /**
@@ -37,8 +37,15 @@ class PackageController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        //Method 1
+        $package =  new Package();
+        $package->packageType = $request->get('packageType');
+        $package->packagePrice = $request->get('packagePrice');
+        $package->save();
+
+        return redirect()->route('package:index');
+}
+
 
     /**
      * Display the specified resource.
@@ -48,7 +55,7 @@ class PackageController extends Controller
      */
     public function show(package $package)
     {
-        //
+        return view('packages.show')->with(compact('package'));
     }
 
     /**
@@ -59,7 +66,7 @@ class PackageController extends Controller
      */
     public function edit(package $package)
     {
-        //
+        return view('packages.edit')->with(compact('pack'));
     }
 
     /**
@@ -71,7 +78,9 @@ class PackageController extends Controller
      */
     public function update(Request $request, package $package)
     {
-        //
+        $package = $package->update($request->only('packageType', 'packagePrice'));
+
+        return redirect()->route('package:index')->with(['alert-type' => 'alert-success', 'alert' => "Your blog updated"]);
     }
 
     /**
@@ -82,6 +91,7 @@ class PackageController extends Controller
      */
     public function destroy(package $package)
     {
-        //
+        $package->delete();
+        return redirect()->route('package:index')->with(['alert-type' => 'alert-danger', 'alert' => "Your blog deleted"]);
     }
 }

@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Package extends Model
 {
-    //
+    protected $fillable = ['packageType', 'packagePrice'];
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

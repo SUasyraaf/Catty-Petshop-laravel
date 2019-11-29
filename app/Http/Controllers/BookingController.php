@@ -37,8 +37,7 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
-
+        
         //Method 1
         $booking =  new Booking();
         $booking->day_in = $request->get('checkin');
@@ -47,7 +46,6 @@ class BookingController extends Controller
         $booking->save();
 
         return redirect()->route('booking:index');
-
     }
 
     /**
@@ -58,7 +56,7 @@ class BookingController extends Controller
      */
     public function show(Booking $booking)
     {
-        //
+        return view('bookings.show')->with(compact('booking'));
     }
 
     /**
@@ -69,7 +67,7 @@ class BookingController extends Controller
      */
     public function edit(Booking $booking)
     {
-        //
+        return view('bookings.edit')->with(compact('booking'));
     }
 
     /**
@@ -81,7 +79,9 @@ class BookingController extends Controller
      */
     public function update(Request $request, Booking $booking)
     {
-        //
+        $booking = $booking->update($request->only('day_in', 'day_out', 'payment'));
+
+        return redirect()->route('booking:index')->with(['alert-type' => 'alert-success', 'alert' => "Your blog updated"]);
     }
 
     /**
@@ -92,6 +92,7 @@ class BookingController extends Controller
      */
     public function destroy(Booking $booking)
     {
-        //
+        $booking->delete();
+        return redirect()->route('booking:index')->with(['alert-type' => 'alert-danger', 'alert' => "Your blog deleted"]);
     }
 }
