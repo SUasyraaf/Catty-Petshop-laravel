@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Room Details Price</div>
+                <div class="card-header">Room Details</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -26,8 +26,8 @@
                                     @foreach ($rooms as $room)
                                         <tr>
                                             <td>{{ $room->id}}</td>
-                                            <td>{{ $room->roomname}}</td>
-                                            <td>{{ $room->price}}</td>
+                                            <td>{{ $room->roomType}}</td>
+                                            <td>{{ $room->roomPrice}}</td>
                                         </tr>
                                     @endforeach
                             </tbody>

@@ -19,9 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::prefix('admin')->group(function(){
+    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+});
+
 Route::get('/bookings/create', 'BookingController@create')->name('create');
 Route::post('/bookings/create', 'BookingController@store')->name('store');
-
 Route::get('/bookings/index', 'BookingController@index')->name('booking:index');
 
 Route::get('/packages/index', 'PackageController@index')->name('package:index');

@@ -15,8 +15,9 @@ class CreatePackagesTable extends Migration
     {
         Schema::create('packages', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('roomname');
-            $table->integer('price');
+            $table->string('packageType');
+            $table->integer('packagePrice');
+            $table->timestamps();
         });
     }
 

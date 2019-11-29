@@ -88,14 +88,18 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ route('create') }}">Booking</a>
-                    <a href="{{ route('package:index') }}">Package</a>
-                    <a href="{{ route('room:index') }}">Room</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="">Users Detail</a>
+                    <a href="{{ route('package:index') }}">List of Package</a>
+                    <a href="{{ route('room:index') }}">List of Room</a><br>
+
+                    <h3>BOOKING</h3>
+
+                    <a href="{{ route('create') }}">Make a Booking</a>
+                    <a href="{{ route('booking:index') }}">My Booking</a><br>
+
+                    <h3>ABOUT US</h3>
+
+                    <a href="">About us</a><br>
                 </div>
             </div>
         </div>
