@@ -66,7 +66,7 @@ class PackageController extends Controller
      */
     public function edit(package $package)
     {
-        return view('packages.edit')->with(compact('pack'));
+        return view('packages.edit')->with(compact('package'));
     }
 
     /**

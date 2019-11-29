@@ -36,7 +36,7 @@
                                             <td>
                                                 <a href="{{ route('package:show',$package) }}" class="btn btn-success">Show</a>
                                                 <a href="{{ route('package:edit',$package) }}" class="btn btn-primary">Edit</a>
-                                                <a href="{{ route('package:delete', $package)}}" class="btn btn-danger"
+                                                <a href="{{ route('package:delete', $package) }}" class="btn btn-danger"
                                                     onclick="return confirm('Are you sure?')">Delete</a>
                                             </td>
                                         </tr>

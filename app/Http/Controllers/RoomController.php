@@ -26,7 +26,7 @@ class RoomController extends Controller
      */
     public function create()
     {
-        //
+        return view('rooms.create');
     }
 
     /**
@@ -37,7 +37,13 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Method 1
+        $room =  new Room();
+        $room->roomType = $request->get('roomType');
+        $room->roomPrice = $request->get('roomPrice');
+        $room->save();
+
+        return redirect()->route('room:index');
     }
 
     /**
@@ -48,7 +54,7 @@ class RoomController extends Controller
      */
     public function show(Room $room)
     {
-        //
+        return view('rooms.show')->with(compact('room'));
     }
 
     /**
@@ -59,7 +65,7 @@ class RoomController extends Controller
      */
     public function edit(Room $room)
     {
-        //
+        return view('rooms.edit')->with(compact('room'));
     }
 
     /**
@@ -71,7 +77,9 @@ class RoomController extends Controller
      */
     public function update(Request $request, Room $room)
     {
-        //
+        $room = $room->update($request->only('roomType', 'roomPrice'));
+
+        return redirect()->route('room:index')->with(['alert-type' => 'alert-success', 'alert' => "Your blog updated"]);
     }
 
     /**
@@ -82,6 +90,7 @@ class RoomController extends Controller
      */
     public function destroy(Room $room)
     {
-        //
+        $room->delete();
+        return redirect()->route('room:index')->with(['alert-type' => 'alert-danger', 'alert' => "Your blog deleted"]);
     }
 }

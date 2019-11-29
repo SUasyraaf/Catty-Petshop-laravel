@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Edit User id :{{ $package->id }}</div>
+                <div class="card-header">Edit User id :{{ $room->id }}</div>
 
                 <div class="card-body">
                     <form action="" method="POST">
@@ -15,8 +15,8 @@
                             <input
                                 type="text"
                                 class="form-control"
-                                id="packageType"
-                                value="{{ $package->packageType }}"
+                                id="roomType"
+                                value="{{ $room->roomType }}"
                             >
                         </div>
 
@@ -25,14 +25,14 @@
                             <input
                                 type="text"
                                 class="form-control"
-                                id="packagePrice"
-                                value="{{ $package->packagePrice }}"
+                                id="roomPrice"
+                                value="{{ $room->roomPrice }}"
                             >
                         </div>
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Update</button>
-                            <a href="{{ route('package:index')}}" class="btn btn-link">Cancel</a>
+                            <a href="{{ route('room:index')}}" class="btn btn-link">Cancel</a>
                         </div>
                     </form>
                 </div>

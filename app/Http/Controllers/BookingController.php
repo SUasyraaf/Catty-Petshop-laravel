@@ -37,7 +37,6 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        
         //Method 1
         $booking =  new Booking();
         $booking->day_in = $request->get('checkin');

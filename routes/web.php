@@ -28,12 +28,12 @@ Route::prefix('admin')->group(function(){
 Route::prefix('bookings')->group(function(){
     Route::get('/create', 'BookingController@create')->name('booking:create');
     Route::post('/create', 'BookingController@store')->name('booking:store');
-    Route::get('/index', 'BookingController@index')->name('booking:index');
 
+    Route::get('/index', 'BookingController@index')->name('booking:index');
     Route::get('/show/{booking}', 'BookingController@show')->name('booking:show');
     Route::get('/edit/{booking}', 'BookingController@edit')->name('booking:edit');
     Route::post('/edit/{booking}', 'BookingController@update')->name('booking:update');
-    Route::get('/delete/{booking}', 'BookingController@delete')->name('booking:delete');
+    Route::get('/delete/{booking}', 'BookingController@destroy')->name('booking:delete');
 });
 
 Route::prefix('packages')->group(function(){
@@ -44,8 +44,18 @@ Route::prefix('packages')->group(function(){
     Route::get('/show/{package}', 'PackageController@show')->name('package:show');
     Route::get('/edit/{package}', 'PackageController@edit')->name('package:edit');
     Route::post('/edit/{package}', 'PackageController@update')->name('package:update');
-    Route::get('/delete/{package}', 'PackageController@delete')->name('package:delete');
+    Route::get('/delete/{package}', 'PackageController@destroy')->name('package:delete');
 });
 
-Route::get('/rooms/index', 'RoomController@index')->name('room:index');
+Route::prefix('rooms')->group(function(){
+    Route::get('/create', 'RoomController@create')->name('room:create');
+    Route::post('/create', 'RoomController@store')->name('room:store');
+
+    Route::get('/index', 'RoomController@index')->name('room:index');
+    Route::get('/show/{package}', 'RoomController@show')->name('room:show');
+    Route::get('/edit/{package}', 'RoomController@edit')->name('room:edit');
+    Route::post('/edit/{package}', 'RoomController@update')->name('room:update');
+    Route::get('/delete/{package}', 'RoomController@destroy')->name('room:delete');
+});
+
 

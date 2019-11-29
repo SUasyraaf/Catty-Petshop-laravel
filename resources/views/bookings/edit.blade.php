@@ -15,6 +15,7 @@
                             <input
                                 type="date"
                                 name="checkin"
+                                id="day_in"
                                 value="{{ $booking->day_in }}"
                             >
                         </div>
@@ -24,6 +25,7 @@
                             <input
                                 type="date"
                                 name="checkout"
+                                id="day_out"
                                 value="{{ $booking->day_out }}"
                             >
                         </div>
