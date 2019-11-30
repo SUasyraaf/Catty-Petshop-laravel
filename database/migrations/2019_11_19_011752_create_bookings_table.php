@@ -19,6 +19,14 @@ class CreateBookingsTable extends Migration
             $table->date('day_out');
             $table->double('payment',5,2);
             $table->timestamps();
+            // $table->unsignedBigInteger('user_id');
+            // $table->foreign('user_id')->references('id')->on('users');
+
+            // $table->unsignedBigInteger('package_id');
+            // $table->foreign('package_id')->references('id')->on('packages');
+
+            // $table->unsignedBigInteger('room_id');
+            // // $table->foreign('room_id')->references('id')->on('rooms');
         });
     }
 

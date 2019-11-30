@@ -24,7 +24,53 @@
                         <div class="form-group">
                             <label for="Check Out">Check Out</label>
                             <input type="date" name="checkout" class="form-control" id="day_out" >
-                          </div>
+                        </div>
+
+
+                        {{-- <!-- DROP DOWN BUTTON FOR PACKAGE -->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" name="package" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose Package
+                            </button>
+                            <div class="dropdown-menu">
+                            @foreach ($packages as $package)
+
+                                <a class="dropdown-item" href="#" value="{{ $package->id }}">{{ $package->packageType }}</a>
+                            @endforeach
+                            </div>
+                        </div> --}}
+
+                        <select name="package" size="3">
+                            @foreach ($packages as $package)
+                                <option value="{{ $package->id }}">{{ $package->packageType }}</option>
+                            @endforeach
+                         </select>
+
+
+
+                        <!-- DROP DOWN BUTTON FOR ROOM -->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose Room
+                            </button>
+                            <div class="dropdown-menu">
+                                @foreach ($rooms as $room)
+                                    <a class="dropdown-item" href="#">{{ $room->roomType }}</a>
+                                @endforeach
+                            </div>
+                        </div>
+
+                        <!-- DROP DOWN BUTTON FOR CAT ID -->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Cat Id
+                            </button>
+                            <div class="dropdown-menu">
+                                @foreach ($cats as $cat)
+                                    <a class="dropdown-item" href="#">{{ $cat->id }}</a>
+                                @endforeach
+                            </div>
+                        </div><br>
 
                         <div class="form-group">
                           <label for="Payment">Payment</label>

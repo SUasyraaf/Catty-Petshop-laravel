@@ -14,17 +14,17 @@
                             <label for="title">Check in Date</label>
                             <input
                                 type="date"
-                                name="checkin"
+                                name="day_in"
                                 id="day_in"
                                 value="{{ $booking->day_in }}"
                             >
                         </div>
-
+                        
                         <div class="form-group">
                             <label for="title">Check out Date</label>
                             <input
                                 type="date"
-                                name="checkout"
+                                name="day_out"
                                 id="day_out"
                                 value="{{ $booking->day_out }}"
                             >
