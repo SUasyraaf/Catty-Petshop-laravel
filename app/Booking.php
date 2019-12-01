@@ -11,4 +11,12 @@ class Booking extends Model
     public function user(){
         return $this->belongsTo('App\User');
     }
+
+    public function package(){
+        return $this->belongsTo('App\Package');
+    }
+
+    public function room(){
+        return $this->belongsTo('App\Room');
+    }
 }

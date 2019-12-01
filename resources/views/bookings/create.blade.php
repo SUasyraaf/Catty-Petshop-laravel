@@ -18,17 +18,17 @@
                         @csrf
                         <div class="form-group">
                           <label for="Check In">Check In</label>
-                          <input type="date"  name="checkin" class="form-control" id="day_in" >
+                          <input type="date"  name="day_in" class="form-control" id="day_in" >
                         </div>
 
                         <div class="form-group">
                             <label for="Check Out">Check Out</label>
-                            <input type="date" name="checkout" class="form-control" id="day_out" >
+                            <input type="date" name="day_out" class="form-control" id="day_out" >
                         </div>
 
 
-                        {{-- <!-- DROP DOWN BUTTON FOR PACKAGE -->
-                        <div class="btn-group">
+                        <!-- DROP DOWN BUTTON FOR PACKAGE -->
+                        <div class="btn-group" name="package">
                             <button type="button" class="btn btn-primary dropdown-toggle" name="package" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Choose Package
                             </button>
@@ -38,13 +38,13 @@
                                 <a class="dropdown-item" href="#" value="{{ $package->id }}">{{ $package->packageType }}</a>
                             @endforeach
                             </div>
-                        </div> --}}
+                        </div>
 
-                        <select name="package" size="3">
+                        {{-- <select name="package">
                             @foreach ($packages as $package)
                                 <option value="{{ $package->id }}">{{ $package->packageType }}</option>
                             @endforeach
-                         </select>
+                         </select> --}}
 
 
 

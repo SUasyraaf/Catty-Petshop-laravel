@@ -77,7 +77,7 @@ class RoomController extends Controller
      */
     public function update(Request $request, Room $room)
     {
-        $room = $room->update($request->only('roomType', 'roomPrice'));
+        $room = $room->update($request->only('roomT', 'roomP'));
 
         return redirect()->route('room:index')->with(['alert-type' => 'alert-success', 'alert' => "Your blog updated"]);
     }

@@ -15,16 +15,18 @@
                             <input
                                 type="date"
                                 name="day_in"
+                                class="form-control"
                                 id="day_in"
                                 value="{{ $booking->day_in }}"
                             >
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="title">Check out Date</label>
                             <input
                                 type="date"
                                 name="day_out"
+                                class="form-control"
                                 id="day_out"
                                 value="{{ $booking->day_out }}"
                             >

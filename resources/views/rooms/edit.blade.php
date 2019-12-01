@@ -14,9 +14,10 @@
                             <label for="title">Package Type</label>
                             <input
                                 type="text"
+                                name="roomType"
                                 class="form-control"
                                 id="roomType"
-                                value="{{ $room->roomType }}"
+                                value="{{ $room->roomType}}"
                             >
                         </div>
 
@@ -24,9 +25,10 @@
                             <label for="title">Package Price</label>
                             <input
                                 type="text"
+                                name="roomPrice"
                                 class="form-control"
                                 id="roomPrice"
-                                value="{{ $room->roomPrice }}"
+                                value="{{ $room->roomPrice}}"
                             >
                         </div>
 

@@ -55,8 +55,8 @@ class BookingController extends Controller
     {
         //Method 1
         $booking =  new Booking();
-        $booking->day_in = $request->get('checkin');
-        $booking->day_out = $request->get('checkout');
+        $booking->day_in = $request->get('day_in');
+        $booking->day_out = $request->get('day_out');
         $booking->payment = $request->get('payment');
         $booking->save();
 
@@ -77,7 +77,7 @@ class BookingController extends Controller
         $package =  Package::all();
 
         $package = $package->find($request->package);
-        dd($package->packagePrice);
+        //dd($package->packagePrice);
 
 
         //calculate room price
@@ -118,10 +118,8 @@ class BookingController extends Controller
      */
     public function update(Request $request, Booking $booking)
     {
-        // dd($request->all());
-
         $booking = $booking->update($request->only('day_in', 'day_out', 'payment'));
-        // dd($booking);
+
         return redirect()->route('booking:index')->with(['alert-type' => 'alert-success', 'alert' => "Your blog updated"]);
     }
 
