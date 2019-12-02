@@ -15,6 +15,7 @@
                             <input
                                 type="text"
                                 class="form-control"
+                                name="packageType"
                                 id="packageType"
                                 value="{{ $package->packageType }}"
                             >
@@ -25,6 +26,7 @@
                             <input
                                 type="text"
                                 class="form-control"
+                                name="packagePrice"
                                 id="packagePrice"
                                 value="{{ $package->packagePrice }}"
                             >

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\package;
+use App\Package;
 use Illuminate\Http\Request;
 
 class PackageController extends Controller
@@ -50,10 +50,10 @@ class PackageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\package  $package
+     * @param  \App\Package  $package
      * @return \Illuminate\Http\Response
      */
-    public function show(package $package)
+    public function show(Package $package)
     {
         return view('packages.show')->with(compact('package'));
     }
@@ -61,10 +61,10 @@ class PackageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\package  $package
+     * @param  \App\Package  $package
      * @return \Illuminate\Http\Response
      */
-    public function edit(package $package)
+    public function edit(Package $package)
     {
         return view('packages.edit')->with(compact('package'));
     }
@@ -73,10 +73,10 @@ class PackageController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\package  $package
+     * @param  \App\Package  $package
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, package $package)
+    public function update(Request $request, Package $package)
     {
         $package = $package->update($request->only('packageType', 'packagePrice'));
 
@@ -86,10 +86,10 @@ class PackageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\package  $package
+     * @param  \App\Package  $package
      * @return \Illuminate\Http\Response
      */
-    public function destroy(package $package)
+    public function destroy(Package $package)
     {
         $package->delete();
         return redirect()->route('package:index')->with(['alert-type' => 'alert-danger', 'alert' => "Your blog deleted"]);

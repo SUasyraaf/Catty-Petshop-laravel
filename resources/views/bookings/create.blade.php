@@ -27,7 +27,7 @@
                         </div>
 
 
-                        <!-- DROP DOWN BUTTON FOR PACKAGE -->
+                        {{-- <!-- DROP DOWN BUTTON FOR PACKAGE -->
                         <div class="btn-group" name="package">
                             <button type="button" class="btn btn-primary dropdown-toggle" name="package" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Choose Package
@@ -38,7 +38,7 @@
                                 <a class="dropdown-item" href="#" value="{{ $package->id }}">{{ $package->packageType }}</a>
                             @endforeach
                             </div>
-                        </div>
+                        </div> --}}
 
                         {{-- <select name="package">
                             @foreach ($packages as $package)
@@ -48,7 +48,7 @@
 
 
 
-                        <!-- DROP DOWN BUTTON FOR ROOM -->
+                        {{-- <!-- DROP DOWN BUTTON FOR ROOM -->
                         <div class="btn-group">
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Choose Room
@@ -70,7 +70,7 @@
                                     <a class="dropdown-item" href="#">{{ $cat->id }}</a>
                                 @endforeach
                             </div>
-                        </div><br>
+                        </div><br> --}}
 
                         <div class="form-group">
                           <label for="Payment">Payment</label>

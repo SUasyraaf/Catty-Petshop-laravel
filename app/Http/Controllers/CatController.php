@@ -16,9 +16,15 @@ class CatController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
          $users = Cat::all();
 
          return view('cats.index')->with(compact('cats'));
+=======
+        $cats = Cat::all();
+
+        return view('cats.index')->with(compact('cats'));
+>>>>>>> d99c9104b50f67a77e85e8508249723db52c5a87
     }
 
     /**
