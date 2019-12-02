@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Booking;
-use App\Cat;
-use App\Package;
-use App\Room;
+
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
-class BookingController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +16,9 @@ class BookingController extends Controller
      */
     public function index()
     {
-         $bookings = Booking::all();
+         $users = User::all();
 
-         return view('bookings.index')->with(compact('bookings'));
+         return view('users.index')->with(compact('users'));
     }
 
     /**
@@ -31,18 +29,10 @@ class BookingController extends Controller
     public function create()
     {
         //query cat
-        $cats = Cat::all();
+        $users = User::all();
         // dd($cats);
 
-        //query packages
-        $packages = Package::all();
-        // dd($packages);
-
-        //query room
-        $rooms = Room::all();
-        // dd($rooms);
-
-        return view('bookings.create')->with(compact(['cats','packages', 'rooms']));
+        return view('users.create')->with(compact(['users']));
     }
 
     /**
@@ -54,11 +44,15 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         //Method 1
-        $booking =  new Booking();
-        $booking->day_in = $request->get('day_in');
-        $booking->day_out = $request->get('day_out');
-        $booking->payment = $request->get('payment');
-        $booking->save();
+        $user =  new User();
+        $user->name      = $request->get('name');
+        $user->ic        = $request->get('ic');
+        $user->email     = $request->get('email');
+        $user->password  = $request->get('password');
+        $user->level     = $request->get('level');
+        $user->address   = $request->get('address');
+        $user->phone_num = $request->get('phone_num');
+        $user->save();
 
 
         //Calculate price
@@ -74,15 +68,15 @@ class BookingController extends Controller
 
         //calculate package price
         // dd($request->package);
-        $package =  Package::all(); //select all
+        $user =  User::all(); //select all
 
-        $package = $package->find($request->package);
+        $user = $user->find($request->user);
         //dd($package->packagePrice);
 
 
         //calculate room price
 
-        return redirect()->route('booking:index');
+        return redirect()->route('user:index');
 
 
     }
@@ -90,48 +84,48 @@ class BookingController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Booking  $booking
+     * @param  \App\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function show(Booking $booking)
+    public function show(User $user)
     {
-        return view('bookings.show')->with(compact('booking'));
+        return view('users.show')->with(compact('user'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Booking  $booking
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Booking $booking)
+    public function edit(User $user)
     {
-        return view('bookings.edit')->with(compact('booking'));
+        return view('users.edit')->with(compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Booking  $booking
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Booking $booking)
+    public function update(Request $request, User $user)
     {
-        $booking = $booking->update($request->only('day_in', 'day_out', 'payment'));
+        $user = $user->update($request->only('name', 'ic', 'email', 'password', 'level', 'address', 'phone_num'));
 
-        return redirect()->route('booking:index')->with(['alert-type' => 'alert-success', 'alert' => "Your blog updated"]);
+        return redirect()->route('user:index')->with(['alert-type' => 'alert-success', 'alert' => "Your blog updated"]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Booking  $booking
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Booking $booking)
+    public function destroy(User $user)
     {
-        $booking->delete();
-        return redirect()->route('booking:index')->with(['alert-type' => 'alert-danger', 'alert' => "Your blog deleted"]);
+        $user->delete();
+        return redirect()->route('user:index')->with(['alert-type' => 'alert-danger', 'alert' => "Your blog deleted"]);
     }
 }

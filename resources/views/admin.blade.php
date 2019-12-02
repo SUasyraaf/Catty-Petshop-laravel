@@ -102,8 +102,8 @@
 
                     <br><br><br>
                     <h3>CLIENT</h3>
-                    <a href="">Customer Detail</a>
-                    <a href="">Cats Detail</a>
+                    <a href="{{ route('user:index') }}">Customer Detail</a>
+                    <a href="{{ route('cat:index') }}">Cats Detail</a>
 
                     <br><br><br>
                     <h3>BOOKING</h3>

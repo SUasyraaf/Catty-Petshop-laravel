@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Packages Details
+                <div class="card-header">Cats Details
                     <div class="float-right">
-                        <a href="{{ route('package:create') }}" class="btn btn-primary">New</a>
+                        <a href="{{ route('cat:create') }}" class="btn btn-primary">New</a>
                     </div>
                 </div>
 
@@ -30,9 +30,10 @@
                             <tbody>
                                     @foreach ($cats as $cat)
                                         <tr>
-                                            <td>{{ $cats->id}}</td>
-                                            <td>{{ $cats->name}}</td>
-                                            <td>{{ $cats->breed}}</td>
+                                            <td>{{ $cat->id}}</td>
+                                            <td>{{ $cat->name}}</td>
+                                            <td>{{ $cat->breed}}</td>
+                                            
                                             <td>
                                                 <a href="{{ route('cat:show',$cat) }}" class="btn btn-success">Show</a>
                                                 <a href="{{ route('cat:edit',$cat) }}" class="btn btn-primary">Edit</a>
