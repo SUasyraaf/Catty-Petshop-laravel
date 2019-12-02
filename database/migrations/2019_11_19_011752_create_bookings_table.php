@@ -21,11 +21,11 @@ class CreateBookingsTable extends Migration
             $table->timestamps();
 
             //FOREIGN KEY
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            // $table->unsignedBigInteger('user_id');
+            // $table->foreign('user_id')->references('id')->on('users');
 
-            $table->unsignedBigInteger('package_id');
-            $table->foreign('package_id')->references('id')->on('packages');
+            // $table->unsignedBigInteger('package_id');
+            // $table->foreign('package_id')->references('id')->on('packages');
 
             // $table->unsignedBigInteger('room_id');
             // $table->foreign('room_id')->references('id')->on('rooms');
@@ -39,12 +39,12 @@ class CreateBookingsTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table){
-            $table->dropColumn('user_id');
-        });
-        Schema::table('packages', function (Blueprint $table){
-            $table->dropColumn('package_id');
-        });
+        // Schema::table('users', function (Blueprint $table){
+        //     $table->dropColumn('user_id');
+        // });
+        // // Schema::table('packages', function (Blueprint $table){
+        //     $table->dropColumn('package_id');
+        // });
         // Schema::table('rooms', function (Blueprint $table){
         //     $table->dropColumn('room_id');
         // });

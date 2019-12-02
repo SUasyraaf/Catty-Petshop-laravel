@@ -52,10 +52,21 @@ Route::prefix('rooms')->group(function(){
     Route::post('/create', 'RoomController@store')->name('room:store');
 
     Route::get('/index', 'RoomController@index')->name('room:index');
-    Route::get('/show/{package}', 'RoomController@show')->name('room:show');
-    Route::get('/edit/{package}', 'RoomController@edit')->name('room:edit');
-    Route::post('/edit/{package}', 'RoomController@update')->name('room:update');
-    Route::get('/delete/{package}', 'RoomController@destroy')->name('room:delete');
+    Route::get('/show/{room}', 'RoomController@show')->name('room:show');
+    Route::get('/edit/{room}', 'RoomController@edit')->name('room:edit');
+    Route::post('/edit/{room}', 'RoomController@update')->name('room:update');
+    Route::get('/delete/{room}', 'RoomController@destroy')->name('room:delete');
+});
+
+Route::prefix('cats')->group(function(){
+    Route::get('/create', 'CatController@create')->name('cat:create');
+    Route::post('/create', 'CatController@store')->name('cat:store');
+
+    Route::get('/index', 'CatController@index')->name('cat:index');
+    // Route::get('/show/{package}', 'RoomController@show')->name('room:show');
+    // Route::get('/edit/{package}', 'RoomController@edit')->name('room:edit');
+    // Route::post('/edit/{package}', 'RoomController@update')->name('room:update');
+    // Route::get('/delete/{package}', 'RoomController@destroy')->name('room:delete');
 });
 
 

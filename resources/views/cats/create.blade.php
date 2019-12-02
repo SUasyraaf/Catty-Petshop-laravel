@@ -17,17 +17,17 @@
                     <form action="" method="POST">
                         @csrf
                         <div class="form-group">
-                            <label for="packageType">Package Type</label>
+                            <label for="packageType">Cat Type</label>
                             <input type="text" name="packageType" class="form-control" id="packageType" >
                           </div>
 
                         <div class="form-group">
-                          <label for="packagePrice">Package Price</label>
+                          <label for="packagePrice">Cat Price</label>
                           <input type="text" name="packagePrice" class="form-control" id="packagePrice" >
                         </div>
 
-                        <button type="submit" name="submit" value="submit" class="btn btn-primary mb-2">Add Package</button>
-                        <a href="{{ route('package:index') }}" class="btn btn-link">Cancel</a>
+                        <button type="submit" name="submit" value="submit" class="btn btn-primary mb-2">Add cat</button>
+                        <a href="{{ route('cat:index') }}" class="btn btn-link">Cancel</a>
                       </form>
 
                 </div>
