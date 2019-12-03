@@ -9,6 +9,6 @@ class Cat extends Model
     protected $fillable = ['name' ,'breed', 'age'];
 
     public function users(){
-        return $this->hasMany('App\User');
+        return $this->belongsTo('App\User');
     }
 }

@@ -21,8 +21,11 @@ class CreateBookingsTable extends Migration
             $table->timestamps();
 
             //FOREIGN KEY
-            // $table->unsignedBigInteger('user_id');
-            // $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+
+            // $table->unsignedBigInteger('cat_id');
+            // $table->foreign('cat_id')->references('id')->on('cats');
 
             // $table->unsignedBigInteger('package_id');
             // $table->foreign('package_id')->references('id')->on('packages');
@@ -39,22 +42,18 @@ class CreateBookingsTable extends Migration
      */
     public function down()
     {
-        // Schema::table('users', function (Blueprint $table){
-        //     $table->dropColumn('user_id');
+        Schema::table('users', function (Blueprint $table){
+            $table->dropColumn('user_id');
+        });
+        // Schema::table('cats', function (Blueprint $table){
+        //     $table->dropColumn('cat_id');
         // });
-        // // Schema::table('packages', function (Blueprint $table){
+        // Schema::table('packages', function (Blueprint $table){
         //     $table->dropColumn('package_id');
         // });
         // Schema::table('rooms', function (Blueprint $table){
         //     $table->dropColumn('room_id');
         // });
-
-        //Method lain
-        // DB::statement('SET FOREIGN_KEY_CHECKS = 0');
-        // Schema::dropIfExists('users');
-        // DB::statement('SET FOREIGN_KEY_CHECKS = 1');
-        // Schema::dropIfExists('packages');
-        // DB::statement('SET FOREIGN_KEY_CHECKS = 1');
-        // Schema::dropIfExists('rooms');
-    }
+        }
 }
+

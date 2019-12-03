@@ -9,6 +9,6 @@ class Room extends Model
     protected $fillable = ['roomType', 'roomPrice'];
 
     public function bookings(){
-        return $this->hasMany('App\Booking');
+        return $this->belongsTo('App\Booking');
     }
 }

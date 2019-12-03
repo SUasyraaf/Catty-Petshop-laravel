@@ -8,15 +8,15 @@ class Booking extends Model
 {
     protected $fillable = ['day_in', 'day_out', 'payment'];
 
+    public function package(){
+        return $this->hasMany('App\Package');
+    }
+
     public function user(){
         return $this->belongsTo('App\User');
     }
 
-    public function package(){
-        return $this->belongsTo('App\Package');
-    }
-
     public function room(){
-        return $this->belongsTo('App\Room');
+        return $this->hasMany('App\Room');
     }
 }

@@ -9,6 +9,6 @@ class Package extends Model
     protected $fillable = ['packageType', 'packagePrice'];
 
     public function bookings(){
-        return $this->hasMany('App\Booking');
+        return $this->belongsTo('App\Booking');
     }
 }

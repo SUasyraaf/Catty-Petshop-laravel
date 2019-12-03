@@ -33,7 +33,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $casts = [
+    protected $cats = [
         'email_verified_at' => 'datetime',
     ];
 
@@ -42,6 +42,6 @@ class User extends Authenticatable
     }
 
     public function cat(){
-        return $this->belongsTo('App\Cat');
+        return $this->hasMany('App\Cat');
     }
 }
