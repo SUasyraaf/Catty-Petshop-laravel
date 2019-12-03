@@ -94,6 +94,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     CATTY PETSHOP
+                    <h5>ADMINISTRATOR</h5>
                 </div>
 
                 <div class="links">

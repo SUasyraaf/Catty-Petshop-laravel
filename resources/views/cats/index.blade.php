@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Cats Details
                     <div class="float-right">
-                        <a href="{{ route('cat:create') }}" class="btn btn-primary">New</a>
+                        <a href="{{ route('cat:create') }}" class="btn btn-primary">New Cat</a>
                     </div>
                 </div>
 

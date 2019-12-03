@@ -19,6 +19,13 @@ class PackageController extends Controller
         return view('packages.index')->with(compact('packages'));
     }
 
+    public function indexcust()
+    {
+        $packages = Package::all();
+
+        return view('packages.indexcust')->with(compact('packages'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

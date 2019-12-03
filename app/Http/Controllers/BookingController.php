@@ -61,7 +61,7 @@ class BookingController extends Controller
         $booking->save();
 
 
-        //Calculate price
+        //PRICE
         //calculate day
         // $fdate=$request->checkin;
         // $tdate=$request->checkout;
@@ -76,12 +76,15 @@ class BookingController extends Controller
         // dd($request->package);
         $package =  Package::all(); //select all
 
-        $package = $package->find($request->package);
+        $package = $packagePrice->find($request->package);
+
         //dd($package->packagePrice);
 
 
         //calculate room price
 
+
+        
         return redirect()->route('booking:index');
 
 

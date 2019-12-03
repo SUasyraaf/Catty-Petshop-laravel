@@ -19,6 +19,13 @@ class RoomController extends Controller
         return view('rooms.index')->with(compact('rooms'));
     }
 
+    public function indexcust()
+    {
+        $rooms = Room::all();
+
+        return view('rooms.indexcust')->with(compact('rooms'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

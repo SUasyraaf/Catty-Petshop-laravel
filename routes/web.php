@@ -52,6 +52,7 @@ Route::prefix('packages')->group(function(){
     Route::post('/create', 'PackageController@store')->name('package:store');
 
     Route::get('/index', 'PackageController@index')->name('package:index');
+    Route::get('/indexcust', 'PackageController@indexcust')->name('package:indexcust');
     Route::get('/show/{package}', 'PackageController@show')->name('package:show');
     Route::get('/edit/{package}', 'PackageController@edit')->name('package:edit');
     Route::post('/edit/{package}', 'PackageController@update')->name('package:update');
@@ -63,6 +64,7 @@ Route::prefix('rooms')->group(function(){
     Route::post('/create', 'RoomController@store')->name('room:store');
 
     Route::get('/index', 'RoomController@index')->name('room:index');
+    Route::get('/indexcust', 'RoomController@indexcust')->name('room:indexcust');
     Route::get('/show/{room}', 'RoomController@show')->name('room:show');
     Route::get('/edit/{room}', 'RoomController@edit')->name('room:edit');
     Route::post('/edit/{room}', 'RoomController@update')->name('room:update');

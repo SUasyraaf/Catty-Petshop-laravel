@@ -87,23 +87,8 @@
                     CATTY PETSHOP
                 </div>
 
-                <div class="links">
-                    <a href="{{ route('package:index') }}">List of Package</a>
-                    <a href="{{ route('room:index') }}">List of Room</a>
-
-                    <br><br><br>
-                    <h3>CLIENT</h3>
-                    <a href="{{ route('user:index') }}">Customer Detail</a>
-                    <a href="{{ route('cat:index') }}">Cats Detail</a>
-
-                    <br><br><br>
-                    <h3>BOOKING</h3>
-                    <a href="{{ route('booking:create') }}">Make a Booking</a>
-                    <a href="{{ route('booking:index') }}">My Booking</a>
-
-                    <br><br><br>
-                    <h3>ABOUT US</h3>
-                    <a href="">About us</a><br>
+                    <h1>ABOUT US</h1>
+                    <a href="">ABOUT US</a><br>
                 </div>
             </div>
         </div>
