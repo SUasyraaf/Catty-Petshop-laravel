@@ -36,6 +36,17 @@ Route::prefix('bookings')->group(function(){
     Route::get('/delete/{booking}', 'BookingController@destroy')->name('booking:delete');
 });
 
+Route::prefix('cats')->group(function(){
+    Route::get('/create', 'CatController@create')->name('cat:create');
+    Route::post('/create', 'CatController@store')->name('cat:store');
+
+    Route::get('/index', 'CatController@index')->name('cat:index');
+    Route::get('/show/{cat}', 'CatController@show')->name('cat:show');
+    Route::get('/edit/{cat}', 'CatController@edit')->name('cat:edit');
+    Route::post('/edit/{cat}', 'CatController@update')->name('cat:update');
+    Route::get('/delete/{cat}', 'CatController@destroy')->name('cat:delete');
+});
+
 Route::prefix('packages')->group(function(){
     Route::get('/create', 'PackageController@create')->name('package:create');
     Route::post('/create', 'PackageController@store')->name('package:store');
@@ -58,17 +69,6 @@ Route::prefix('rooms')->group(function(){
     Route::get('/delete/{room}', 'RoomController@destroy')->name('room:delete');
 });
 
-Route::prefix('cats')->group(function(){
-    Route::get('/create', 'CatController@create')->name('cat:create');
-    Route::post('/create', 'CatController@store')->name('cat:store');
-
-    Route::get('/index', 'CatController@index')->name('cat:index');
-    Route::get('/show/{cat}', 'CatController@show')->name('cat:show');
-    Route::get('/edit/{cat}', 'CatController@edit')->name('cat:edit');
-    Route::post('/edit/{cat}', 'CatController@update')->name('cat:update');
-    Route::get('/delete/{cat}', 'CatController@destroy')->name('cat:delete');
-});
-
 Route::prefix('users')->group(function(){
     Route::get('/create', 'UserController@create')->name('user:create');
     Route::post('/create', 'UserController@store')->name('user:store');
@@ -79,4 +79,6 @@ Route::prefix('users')->group(function(){
     Route::post('/edit/{user}', 'UserController@update')->name('user:update');
     Route::get('/delete/{user}', 'UserController@destroy')->name('user:delete');
 });
+
+
 

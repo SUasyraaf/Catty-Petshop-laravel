@@ -16,6 +16,10 @@ class Booking extends Model
         return $this->belongsTo('App\User');
     }
 
+    public function cat(){
+        return $this->hasMany('App\User');
+    }
+
     public function room(){
         return $this->hasMany('App\Room');
     }

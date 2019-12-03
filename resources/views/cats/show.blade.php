@@ -9,20 +9,20 @@
 
                 <div class="card-body">
                         <div class="form-group">
-                            Id:
+                            Cat Id :
                             {{ $cat->id}}
                         </div>
                         <div class="form-group">
-                            Cat Name:
+                            Cat Name :
                             {{ $cat->name }}
                         </div>
                         <div class="form-group">
-                            Cat Breed:
-                            {{ $cat->breed}}
+                            Breed :
+                            {{ $cat->breed }}
                         </div>
                         <div class="form-group">
                             Cat Age:
-                            {{ $cat->age}}
+                            {{ $cat->age }}
                         </div>
 
                         <div class="form-group">

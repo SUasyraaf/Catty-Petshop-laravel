@@ -94,6 +94,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     CATTY PETSHOP
+                    <h5>ADMINISTRATOR</h5>
                 </div>
 
                 <div class="links">
@@ -101,18 +102,15 @@
                     <a href="{{ route('room:index') }}">List of Room</a>
 
                     <br><br><br>
-                    <h3>CLIENT</h3>
+                    {{-- <h3>CLIENT</h3> --}}
                     <a href="{{ route('user:index') }}">Customer Detail</a>
-                    <a href="">Cats Detail</a>
+                    <a href="{{ route('cat:index') }}">Cats Detail</a>
 
                     <br><br><br>
-                    <h3>BOOKING</h3>
+                    {{-- <h3>BOOKING</h3> --}}
                     <a href="{{ route('booking:create') }}">Make a Booking</a>
                     <a href="{{ route('booking:index') }}">My Booking</a>
 
-                    <br><br><br>
-                    <h3>ABOUT US</h3>
-                    <a href="">About us</a><br>
                 </div>
             </div>
         </body>

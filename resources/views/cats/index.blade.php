@@ -24,6 +24,7 @@
                                 <th>Id</th>
                                 <th>Name</th>
                                 <th>Breed</th>
+                                <th>Age</th>
                                 <th>Action</th>
                               </tr>
                             </thead>
@@ -33,7 +34,7 @@
                                             <td>{{ $cat->id}}</td>
                                             <td>{{ $cat->name}}</td>
                                             <td>{{ $cat->breed}}</td>
-                                            
+                                            <td>{{ $cat->age}}</td>
                                             <td>
                                                 <a href="{{ route('cat:show',$cat) }}" class="btn btn-success">Show</a>
                                                 <a href="{{ route('cat:edit',$cat) }}" class="btn btn-primary">Edit</a>

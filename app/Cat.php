@@ -11,4 +11,8 @@ class Cat extends Model
     public function users(){
         return $this->belongsTo('App\User');
     }
+
+    public function bookings(){
+        return $this->belongsTo('App\booking');
+    }
 }
