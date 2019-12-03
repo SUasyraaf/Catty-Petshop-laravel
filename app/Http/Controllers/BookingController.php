@@ -74,7 +74,7 @@ class BookingController extends Controller
 
         //calculate package price
         // dd($request->package);
-        $package =  Package::all();
+        $package =  Package::all(); //select all
 
         $package = $package->find($request->package);
         //dd($package->packagePrice);

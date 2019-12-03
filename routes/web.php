@@ -80,4 +80,3 @@ Route::prefix('users')->group(function(){
     Route::get('/delete/{user}', 'UserController@destroy')->name('user:delete');
 });
 
-

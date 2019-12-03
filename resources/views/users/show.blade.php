@@ -40,7 +40,6 @@
                             Phone Number:
                             {{ $user->phone_num}}
                         </div>
-
                         <div class="form-group">
                             <a href="{{ route('user:index')}}" class="btn btn-link">Back</a>
                         </div>

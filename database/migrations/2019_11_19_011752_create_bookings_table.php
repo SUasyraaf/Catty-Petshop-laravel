@@ -42,6 +42,7 @@ class CreateBookingsTable extends Migration
      */
     public function down()
     {
+<<<<<<< HEAD
         Schema::table('users', function (Blueprint $table){
             $table->dropColumn('user_id');
         });
@@ -49,6 +50,19 @@ class CreateBookingsTable extends Migration
         //     $table->dropColumn('cat_id');
         // });
         // Schema::table('packages', function (Blueprint $table){
+=======
+<<<<<<< HEAD
+        Schema::table('users', function (Blueprint $table){
+            $table->dropColumn('user_id');
+        });
+        // Schema::table('packages', function (Blueprint $table){
+=======
+        // Schema::table('users', function (Blueprint $table){
+        //     $table->dropColumn('user_id');
+        // });
+        // // Schema::table('packages', function (Blueprint $table){
+>>>>>>> d99c9104b50f67a77e85e8508249723db52c5a87
+>>>>>>> bdac45acb4705f2b8d2fa487b3219e00999571ac
         //     $table->dropColumn('package_id');
         // });
         // Schema::table('rooms', function (Blueprint $table){
