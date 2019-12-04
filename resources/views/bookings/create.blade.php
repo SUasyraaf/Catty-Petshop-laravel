@@ -28,7 +28,7 @@
 
 
                         <!-- DROP DOWN BUTTON FOR PACKAGE -->
-                        <div class="btn-group" name="package">
+                        {{-- <div class="btn-group" name="package">
                             <button type="button" class="btn btn-primary dropdown-toggle" name="package" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Choose Package
                             </button>
@@ -38,7 +38,7 @@
                                 <a class="dropdown-item" href="#" value="{{ $package->id }}">{{ $package->packageType }}</a>
                             @endforeach
                             </div>
-                        </div>
+                        </div> --}}
 
                         {{-- <select name="package">
                             @foreach ($packages as $package)

@@ -7,7 +7,8 @@
             <div class="card">
                 <div class="card-header">Cats Details
                     <div class="float-right">
-                        <a href="{{ route('admin.dashboard') }}" class="btn btn-primary">Back</a>
+                        <a href="{{ route('cat:create') }}" class="btn btn-primary">Register Cat</a>
+                        <a href="{{ route('home') }}" class="btn btn-primary">Back</a>
                     </div>
                 </div>
 

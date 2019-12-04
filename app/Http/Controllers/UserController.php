@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -97,5 +98,14 @@ class UserController extends Controller
     {
         $user->delete();
         return redirect()->route('user:index')->with(['alert-type' => 'alert-danger', 'alert' => "Your blog deleted"]);
+    }
+
+    public function admin()
+    {
+        $users = User::all();
+        $user = User::select('level')->where('id', $users)->get();
+
+        // return view ('welcome', compact('user'));
+        return view('welcome')->with(compact('user'));
     }
 }

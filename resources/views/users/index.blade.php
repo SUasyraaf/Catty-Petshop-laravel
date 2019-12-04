@@ -5,7 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Customer details</div>
+                <div class="card-header">Customer details
+                    <div class="float-right">
+                        <a href="{{ route('admin.dashboard') }}" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))

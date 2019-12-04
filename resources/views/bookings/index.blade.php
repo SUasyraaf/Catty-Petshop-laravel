@@ -24,10 +24,8 @@
                                 <th>Id</th>
                                 <th>Check in</th>
                                 <th>Check out</th>
-                                {{-- <th>Package Type</th>
-                                <th>Room Type</th>
-                                <th>Cat id</th> --}}
                                 <th>Payment</th>
+                                <th>User ID</th>
                                 <th>Action</th>
                               </tr>
                             </thead>
@@ -37,9 +35,7 @@
                                             <td>{{ $booking->id }}</td>
                                             <td>{{ $booking->day_in }}</td>
                                             <td>{{ $booking->day_out }}</td>
-                                            {{-- <td>{{ $booking->packageType }}</td>
-                                            <td>{{ $booking->roomType }}</td>
-                                            <td>{{ $booking->catID }}</td> --}}
+                                            <td>{{ $booking->user_id }}</td>
                                             <td>{{ $booking->payment }}</td>
                                             <td>
                                                 <a href="{{ route('booking:show',$booking) }}" class="btn btn-success">Show</a>

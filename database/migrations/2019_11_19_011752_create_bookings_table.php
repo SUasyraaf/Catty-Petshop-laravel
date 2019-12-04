@@ -18,11 +18,11 @@ class CreateBookingsTable extends Migration
             $table->date('day_in');
             $table->date('day_out');
             $table->double('payment',5,2);
-            $table->timestamps();
+            
 
             //FOREIGN KEY
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            // $table->unsignedBigInteger('user_id');
+            // $table->foreign('user_id')->references('id')->on('users');
 
             // $table->unsignedBigInteger('cat_id');
             // $table->foreign('cat_id')->references('id')->on('cats');
@@ -43,9 +43,9 @@ class CreateBookingsTable extends Migration
     public function down()
     {
 
-        Schema::table('users', function (Blueprint $table){
-            $table->dropColumn('user_id');
-        });
+        // Schema::table('users', function (Blueprint $table){
+        //     $table->dropColumn('user_id');
+        // });
 
         // Schema::table('cats', function (Blueprint $table){
         //     $table->dropColumn('cat_id');

@@ -27,6 +27,26 @@
                         </div>
 
                         <div class="form-group">
+                            Package Type:
+                            {{ $booking->package_id}}
+                        </div>
+
+                        <div class="form-group">
+                            Room Type:
+                            {{ $booking->room_id}}
+                        </div>
+
+                        <div class="form-group">
+                            Cat ID:
+                            {{ $booking->cat_id}}
+                        </div>
+
+                        <div class="form-group">
+                            Owner ID:
+                            {{ $booking->user_id}}
+                        </div>
+
+                        <div class="form-group">
                             <a href="{{ route('booking:index')}}" class="btn btn-link">Back</a>
                         </div>
                     </form>

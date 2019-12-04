@@ -41,6 +41,7 @@ Route::prefix('cats')->group(function(){
     Route::post('/create', 'CatController@store')->name('cat:store');
 
     Route::get('/index', 'CatController@index')->name('cat:index');
+    Route::get('/indexcust', 'CatController@indexcust')->name('cat:indexcust');
     Route::get('/show/{cat}', 'CatController@show')->name('cat:show');
     Route::get('/edit/{cat}', 'CatController@edit')->name('cat:edit');
     Route::post('/edit/{cat}', 'CatController@update')->name('cat:update');

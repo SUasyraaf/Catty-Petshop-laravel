@@ -102,7 +102,7 @@
 
                     <br><br><br>
                     <h3>CAT <br>
-                    <a href="{{ route('cat:index') }}">Register your cat</a>
+                    <a href="{{ route('cat:indexcust') }}">Register your cat</a>
                     </h3>
 
                     <br><br><br>

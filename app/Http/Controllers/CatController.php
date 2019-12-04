@@ -19,6 +19,13 @@ class CatController extends Controller
         return view('cats.index')->with(compact('cats'));
     }
 
+    public function indexcust()
+    {
+        $cats = Cat::all();
+
+        return view('cats.indexcust')->with(compact('cats'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
