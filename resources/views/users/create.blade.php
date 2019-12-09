@@ -36,10 +36,10 @@
                           <input type="text" name="password" class="form-control" id="password" >
                         </div>
                         
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                           <label for="level">Level</label>
                           <input type="text" name="level" class="form-control" id="level" >
-                        </div>
+                        </div> -->
                         
                         <div class="form-group">
                           <label for="address">Address</label>

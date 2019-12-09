@@ -44,7 +44,6 @@ class UserController extends Controller
         $user->ic = $request->get('ic');
         $user->email = $request->get('email');
         $user->password = $request->get('password');
-        $user->level = $request->get('level');
         $user->address = $request->get('address');
         $user->phone_num = $request->get('phone_num');
         $user->save();
@@ -83,7 +82,7 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user = $user->update($request->only('name', 'ic', 'email', 'password', 'level', 'address', 'phone_num'));
+        $user = $user->update($request->only('name', 'ic', 'email', 'password', 'address', 'phone_num'));
 
         return redirect()->route('user:index')->with(['alert-type' => 'alert-success', 'alert' => "Your blog updated"]);
     }

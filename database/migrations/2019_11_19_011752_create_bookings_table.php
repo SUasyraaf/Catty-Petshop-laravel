@@ -17,6 +17,7 @@ class CreateBookingsTable extends Migration
             $table->bigIncrements('id');
             $table->date('day_in');
             $table->date('day_out');
+            $table->integer('num_of_days');
             $table->double('payment',5,2);
             
 

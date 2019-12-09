@@ -57,6 +57,7 @@ class BookingController extends Controller
         $booking =  new Booking();
         $booking->day_in = $request->get('day_in');
         $booking->day_out = $request->get('day_out');
+        $booking->num_of_days = $request->get('num_of_days');
         $booking->payment = $request->get('payment');
         $booking->save();
 
@@ -121,7 +122,7 @@ class BookingController extends Controller
      */
     public function update(Request $request, Booking $booking)
     {
-        $booking = $booking->update($request->only('day_in', 'day_out', 'payment'));
+        $booking = $booking->update($request->only('day_in', 'day_out', 'num_of_days','payment'));
 
         return redirect()->route('booking:index')->with(['alert-type' => 'alert-success', 'alert' => "Your blog updated"]);
     }

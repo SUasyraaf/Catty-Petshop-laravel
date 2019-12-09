@@ -26,9 +26,14 @@
                             <input type="date" name="day_out" class="form-control" id="day_out" >
                         </div>
 
+                        <div class="form-group">
+                            <label for="Number of Days ">Number of Days</label>
+                            <input type="text" name="num_of_days" class="form-control" id="num_of_days" >
+                        </div>
+
 
                         <!-- DROP DOWN BUTTON FOR PACKAGE -->
-                        {{-- <div class="btn-group" name="package">
+                        <div class="btn-group" name="package">
                             <button type="button" class="btn btn-primary dropdown-toggle" name="package" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Choose Package
                             </button>
@@ -38,17 +43,17 @@
                                 <a class="dropdown-item" href="#" value="{{ $package->id }}">{{ $package->packageType }}</a>
                             @endforeach
                             </div>
-                        </div> --}}
+                        </div> 
 
-                        {{-- <select name="package">
+                        <select name="package">
                             @foreach ($packages as $package)
                                 <option value="{{ $package->id }}">{{ $package->packageType }}</option>
                             @endforeach
-                         </select> --}}
+                         </select>
 
 
 
-                        {{-- <!-- DROP DOWN BUTTON FOR ROOM -->
+                        <!-- DROP DOWN BUTTON FOR ROOM -->
                         <div class="btn-group" name="room">
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Choose Room
@@ -70,7 +75,7 @@
                                     <a class="dropdown-item" href="#">{{ $cat->id }}</a>
                                 @endforeach
                             </div>
-                        </div><br> --}}
+                        </div><br> 
 
                         <div class="form-group">
                           <label for="Payment">Payment</label>

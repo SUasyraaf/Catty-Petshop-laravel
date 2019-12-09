@@ -33,13 +33,22 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="title">Number of Days </label>
+                            <input
+                                type="text"
+                                name="num_of_days" id="num_of_days"
+                                class="form-control"{{ $booking->num_of_days }}
+                            >
+                        </div>
+
+                        <!-- <div class="form-group">
                             <label for="title">Payment</label>
                             <input
                                 type="text"
                                 name="payment" id="payment"
                                 class="form-control"{{ $booking->payment }}
                             >
-                        </div>
+                        </div> -->
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Update</button>
